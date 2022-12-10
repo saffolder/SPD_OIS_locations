@@ -123,7 +123,7 @@
       zoom: 10.5
     });
 
-    map.loadImage('assets/spdIcon3.png', (error, icon) => { // load in the icon for police
+    map.loadImage('imgs/spdIcon3.png', (error, icon) => { // load in the icon for police
       if (error) throw error;
       map.addImage('policeIcon', icon);
     });
