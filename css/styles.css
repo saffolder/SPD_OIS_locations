@@ -1,0 +1,39 @@
+/**
+  CSS for index.html
+**/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#sidebar {
+  top: 0;
+  bottom: 0;
+  padding: 10px;
+  position: fixed;
+}
+
+#sidebar div {
+  background-color: #FAF9F6;
+  border-radius: 35px;
+  border: double 4px tan;
+  padding: 10px;
+  margin: 5px;
+}
+
+#title {
+  text-align: center;
+}
+
+#legend {
+  /* format this to be on the right side of the map*/
+}
