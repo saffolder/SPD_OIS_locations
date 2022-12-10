@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features":[{
+    "type":"Feature",
+    "properties": {
+      "location": "South Precinct - Seattle Police Department"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.29315, 47.53887]
+    }
+  },
+  {
+    "type":"Feature",
+    "properties": {
+      "location": "West Precinct - Seattle Police Department"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.33716, 47.61642]
+    }
+  },
+  {
+    "type":"Feature",
+    "properties": {
+      "location": "Headquarters - Seattle Police Department"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.32920, 47.60453]
+    }
+  },
+  {
+    "type":"Feature",
+    "properties": {
+      "location": "Seattle Police Department"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.33427, 47.70359]
+    }
+  },
+  {
+    "type":"Feature",
+    "properties": {
+      "location": "Southwest Precinct - Seattle Police Department"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.36201, 47.53610]
+    }
+  },
+  {
+    "type":"Feature",
+    "properties": {
+      "location": "East Precinct - Seattle Police Department"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.31703, 47.61529]
+    }
+  }
+]
+}
