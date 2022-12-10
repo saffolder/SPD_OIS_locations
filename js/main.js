@@ -67,7 +67,6 @@
         }
 
         const feature = features[0];
-        console.log(feature);
         if(feature.layer.id == 'ois-layer') {
           popup.setLngLat(feature.geometry.coordinates).setHTML('OIS shooting').addTo(map);
         } else {
