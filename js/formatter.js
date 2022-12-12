@@ -28,7 +28,9 @@ fs.readFile('assets/OISData.json', 'utf8', (error, oisData) => {
         "Fatal": data[i]["Fatal"],
         "On-duty": data[i]["On-duty"],
         "Disposition": data[i]["Disposition"],
-        "Officer Disciplined?": data[i]["Officer Disciplined?"]
+        "Officer Disciplined?": data[i]["Officer Disciplined?"],
+        "Summary": data[i]["Summary"]
+
       },
       "geometry": {
         "type": "Point",
