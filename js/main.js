@@ -88,7 +88,6 @@
 
         const oisFeature = oisFeatures[0];
         const nearestSPD = turf.nearest(oisFeature, spdLocations);
-
         if (nearestSPD === null) return;
         map.getSource('nearest-spd').setData({
           'type': 'FeatureCollection',
@@ -110,9 +109,43 @@
         },
         'spd-layer'
         );
+
+        summarizeOIS(oisFeature.properties);
       });
     });
   }
+
+  // Populates the sidebar with information regarding the shooting clicked on
+  function summarizeOIS(data) {
+    removeInfo(document.getElementById('ois-info'));
+    let officerRace, subjRace, fatal, summary;
+
+    officerRace = document.createElement('p');
+    officerRace.innerText = 'Officer Race: ' + data['Officer Race'];
+
+    subjRace = document.createElement('p');
+    subjRace.innerText = 'Subject Race: ' + data['Subject Race'];
+
+    fatal = document.createElement('p');
+    fatal.innerText = 'Fatal: ' + data['Fatal'];
+
+    summary = document.createElement('p');
+    summary.innerText = data['Summary'];
+
+    const oisInfo = document.getElementById('ois-info');
+    oisInfo.appendChild(officerRace);
+    oisInfo.appendChild(subjRace);
+    oisInfo.appendChild(fatal);
+    oisInfo.appendChild(summary);
+  }
+
+  // Removes all of the information about a previously selected shooting
+  function removeInfo(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
   // Initializing function called after the DOM is loaded in
  function init() {
     map = new mapboxgl.Map({
