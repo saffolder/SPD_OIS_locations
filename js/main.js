@@ -26,7 +26,7 @@
         },
         layout: {
           'icon-image': 'policeIcon',
-          'icon-size': 0.05
+          'icon-size': 0.08
         },
         paint: {}
       });
@@ -79,6 +79,7 @@
 
       // Create Nearest Neighbor function
       map.on('click', (e) => {
+
         const oisFeatures = map.queryRenderedFeatures(e.point, {
           layers: ['ois-layer']
         });
@@ -103,12 +104,17 @@
           type: 'circle',
           source: 'nearest-spd',
           paint: {
-            'circle-radius': 20,
+            'circle-radius': 25,
             'circle-color': 'yellow'
           }
         },
         'spd-layer'
         );
+
+        map.flyTo({
+          center: oisFeature.geometry.coordinates,
+          zoom: 11
+        });
 
         summarizeOIS(oisFeature.properties);
       });
@@ -129,7 +135,7 @@
   function init() {
     map = new mapboxgl.Map({
       container: 'map', // container ID
-      style: 'mapbox://styles/mapbox/light-v11',
+      style: 'mapbox://styles/samaffolder/cl2jvuxtg003i14l26mtl63h6',
       center: [-122.3, 47.62], // Centered on Seattle
       zoom: 10.5
     });
