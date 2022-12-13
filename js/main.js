@@ -132,7 +132,7 @@
   }
 
   function fitToScreen() {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 900) {
       document.querySelectorAll('#title p').forEach( item => {
         item.classList.add('hidden');
       })
