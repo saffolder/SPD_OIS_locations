@@ -48,3 +48,23 @@ body {
 .hidden {
   display: none;
 }
+
+/**
+ BELOW IS FOR A MOBILE DEVICE
+**/
+
+@media screen and (max-width: 800px) {
+  #sidebar {
+    position: absolute;
+    width: auto;
+    background: white;
+    top: 0;
+    bottom: auto;
+
+  }
+
+  #map {
+    width: 100%;
+    left: 0%;
+  }
+}

@@ -131,6 +131,20 @@
     document.getElementById('summary').innerText = '\n' + data['Summary'];
   }
 
+  function fitToScreen() {
+    if (window.innerWidth < 800) {
+      document.querySelectorAll('#title p').forEach( item => {
+        item.classList.add('hidden');
+      })
+      document.getElementById('data').classList.add('hidden');
+    } else {
+      document.querySelectorAll('#title > p').forEach( item => {
+        item.classList.remove('hidden');
+      })
+      document.getElementById('data').classList.remove('hidden');
+    }
+  }
+
   // Initializing function called after the DOM is loaded in
   function init() {
     map = new mapboxgl.Map({
@@ -146,7 +160,11 @@
     });
 
     document.getElementById('remove').addEventListener('click', () => {document.getElementById('ois-info').classList.add('hidden');});
+    window.addEventListener('resize', () => {
+      fitToScreen();
+    });
 
+    fitToScreen();
     geojsonFetch();
 
   }
