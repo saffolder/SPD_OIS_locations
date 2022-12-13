@@ -8,20 +8,10 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
   <script src="https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/main.js"></script>
 </head>
 
 <body>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <div class="topnav" id="myTopnav">
-    <a href="javascript:void(0);" class="icon">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a class="active" href="" id="oisInfoNav">OIS Info</a>
-    <a href="" id="abstractNav">Abstract</a>
-    <a href="" id="referencesNav">References</a>
-  </div>
   <div id="sidebar">
     <div id="title">
       <h1>Seattle Police Department Locations and Officer Involved Shootings</h1>
@@ -31,13 +21,19 @@
       <p>Clicking on an OIS reveals more information and highlights the closest SPD Station.</p>
     </div>
     <div>
-      <h2>OIS Information:</h2>
-      <div id="ois-info"></div>
+      <h2>Data Sources:</h2>
       <p><a href="https://data.seattle.gov/Public-Safety/SPD-Officer-Involved-Shooting-OIS-Data/mg5r-efcm">OIS Data</a>
       <br>
       <a href="https://www.seattle.gov/police/about-us/police-locations">SPD Locations</a>
     </p>
     </div>
+  </div>
+  <div id="ois-info" class="hidden">
+    <button id="remove">x</button>
+    <div><p><b>Officer Race:</b></p><p id="officerRace"></p></div>
+    <div><p><b>Subject Race:</b></p><p id="subjRace"></p></div>
+    <div><p ><b>Fatal:</b></p><p id="fatal"></p></div>
+    <div><p><b>Summary:</b></p><p id="summary"></p></div>
   </div>
   <div id="map"></div>
 </body>

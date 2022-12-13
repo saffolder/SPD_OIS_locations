@@ -117,43 +117,12 @@
 
   // Populates the sidebar with information regarding the shooting clicked on
   function summarizeOIS(data) {
-    removeInfo(document.getElementById('ois-info'));
-    let officerRace, subjRace, fatal, summary;
-
-    officerRace = document.createElement('p');
-    officerRace.innerText = 'Officer Race: ' + data['Officer Race'];
-
-    subjRace = document.createElement('p');
-    subjRace.innerText = 'Subject Race: ' + data['Subject Race'];
-
-    fatal = document.createElement('p');
-    fatal.innerText = 'Fatal: ' + data['Fatal'];
-
-    summary = document.createElement('p');
-    summary.innerText = data['Summary'];
-
     const oisInfo = document.getElementById('ois-info');
-    oisInfo.appendChild(officerRace);
-    oisInfo.appendChild(subjRace);
-    oisInfo.appendChild(fatal);
-    oisInfo.appendChild(summary);
-  }
-
-  // Removes all of the information about a previously selected shooting
-  function removeInfo(parent) {
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
-  }
-
-  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function responsive_control() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
+    oisInfo.classList.remove('hidden');
+    document.getElementById('officerRace').innerText = ' ' + data['Officer Race'];
+    document.getElementById('subjRace').innerText = ' ' + data['Subject Race'];
+    document.getElementById('fatal').innerText = ' ' + data['Fatal'];
+    document.getElementById('summary').innerText = '\n' + data['Summary'];
   }
 
   // Initializing function called after the DOM is loaded in
@@ -170,8 +139,7 @@
       map.addImage('policeIcon', icon);
     });
 
-    let icon = document.getElementsByClassName("icon")[0];
-    icon.addEventListener('click', responsive_control);
+    document.getElementById('remove').addEventListener('click', () => {document.getElementById('ois-info').classList.add('hidden');});
 
     geojsonFetch();
 
