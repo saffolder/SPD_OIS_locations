@@ -59,12 +59,24 @@ body {
     width: auto;
     background: white;
     top: 0;
-    bottom: auto;
-
+    bottom: 75%;
   }
 
   #map {
     width: 100%;
     left: 0%;
+  }
+
+  #ois-info {
+    box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    background: white;
+    position: absolute;
+    top: 70%;
+    padding: 10px;
+    margin: 10px;
+    left: 0%;
+    bottom: 3%;
+    width: auto;
+    overflow-y: scroll;
   }
 }
