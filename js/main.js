@@ -39,7 +39,7 @@
           data: oisData
         },
         paint: {
-          'circle-radius': 4,
+          'circle-radius': 5,
           'circle-color': 'red'
         }
       });
@@ -113,7 +113,7 @@
 
         map.flyTo({
           center: oisFeature.geometry.coordinates,
-          zoom: 11
+          zoom: 12
         });
 
         summarizeOIS(oisFeature.properties);
