@@ -1,5 +1,4 @@
 # Seattle Police Department's Officer Involved Shooting Locations
-#### Group BA7
 ## Abstract
 This interactive web map is aimed at showing the locations of Officer Involved Shootings (OIS) for the Seattle Police Department (SPD) since 2005 with a descriptive summary of what occurred at that location. Along with the locations of the shootings, which are red dots, the locations of SPD police stations are also indicated on the map by the icon:
 <img src="imgs/spdIcon3.png" width="50px">
